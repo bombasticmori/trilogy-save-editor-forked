@@ -62,7 +62,7 @@ pub struct RpcUtils<'a> {
 pub fn rpc_handler(mut req: RpcRequest, utils: RpcUtils) -> Option<RpcResponse> {
     let mut handle_request = || -> Result<Option<Value>> {
         if req.method == "open_command_line_save" {
-            let response = if let Some(path) = utils.args.value_of("SAVE") {
+            let response = if let Some(path) = utils.args.get_one::<String>("SAVE") {
                 let mut path = PathBuf::from(path);
                 if path.is_relative() {
                     path = env::current_dir()?.join(path);

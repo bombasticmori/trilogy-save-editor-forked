@@ -3,7 +3,6 @@
   "author": "Karlitos",
   "license": "CECILL-2.1",
   "description": "A save editor for Mass Effect Trilogy (and Legendary)",
-  "dependencies": {},
   "scripts": {
     "build": "tailwindcss -i index.css -o target/index.css --jit",
     "release": "tailwindcss -i index.css -o target/index.css --jit --minify",

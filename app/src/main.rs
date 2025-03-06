@@ -28,9 +28,9 @@ use wry::{
 struct Asset;
 
 fn parse_args() -> ArgMatches {
-    let app = clap::App::new("Trilogy Save Editor")
+    let app = clap::builder::Command::new("Trilogy Save Editor Forked")
         .version(env!("CARGO_PKG_VERSION"))
-        .author("by Karlitos")
+        .author("by Karlitos, edited by Mori")
         .about("A save editor for Mass Effect Trilogy (and Legendary)")
         .arg(Arg::new("SAVE").help("Mass Effect save file"));
 
